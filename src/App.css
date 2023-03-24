@@ -3,7 +3,7 @@
     margin: 0 auto;
     /* border: 8px dashed green;
     min-height: 100px; */
-    container-type: inline-size;     /* This can be size or inline-size. size tracks both height and width, whereas inline-size only gices us the width only */
+    container-type: inline-size;     /* This can be size or inline-size. size tracks both height and width, whereas inline-size only gives us the width only */
 }
 
 .layout {
