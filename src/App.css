@@ -1,0 +1,70 @@
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* border: 8px dashed green;
+    min-height: 100px; */
+    container-type: inline-size;     /* This can be size or inline-size. size tracks both height and width, whereas inline-size only gices us the width only */
+}
+
+.layout {
+}
+
+.info {
+    padding: 0 1rem;
+}
+
+.info h4 {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    background-position: cover cover;
+}
+
+.container {
+    container-type: inline-size;
+}
+
+.card {
+    margin-bottom: 2.5rem;
+}
+
+.card h1 {
+    /* border: 8px dashed red;
+    min-height: 100px; */
+}
+
+@container (min-width: 900px) {     /* Basically its saying apply these styles when the container reaches a min-width of 900px */
+    .layout {           /* So, now when the layout container reaches <= 900px, it's display property changes to grid */
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem
+    }
+}
+
+@container (min-width: 36rem) {     /* Basically its saying apply these styles when the container reaches a min-width of 36rem */
+    .card {           /* So, now when the layout container reaches <= 36rem, it's display property changes to grid */
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .image {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+}
+
+@container (max-width: 36rem) {
+    .image {
+        background-position: center 10%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    .info p {
+        display: none;
+    }
+}
